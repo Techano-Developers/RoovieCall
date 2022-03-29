@@ -13,10 +13,10 @@ const usersDiv = document.getElementById("users");
 usernameInput.value = userStatus.username;
 
 window.onload = (e) => {
-    mainFunction(1000);
+    mainFunction(700);
 };
 
-var socket = io("ws://localhost:3000");
+var socket = io("https://test.roovie.live");
 socket.emit("userInformation", userStatus);
 
 function mainFunction(time) {
@@ -73,11 +73,6 @@ function mainFunction(time) {
         }
     });
 }
-
-usernameLabel.onclick = function () {
-    usernameDiv.style.display = "block";
-    usernameLabel.style.display = "none";
-};
 
 function changeUsername() {
     userStatus.username = usernameInput.value;
