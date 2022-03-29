@@ -81,8 +81,6 @@ usernameLabel.onclick = function () {
 
 function changeUsername() {
     userStatus.username = usernameInput.value;
-    usernameDiv.style.display = "none";
-    usernameLabel.style.display = "block";
     emitUserInformation();
 }
 
